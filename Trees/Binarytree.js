@@ -12,5 +12,10 @@ class BinaryTree{
     this.root=new node(root,null,null)
     this.height=null
   }
-
+ 
+  insertNode(node){
+    if(this.root.left==null){
+        this.root.left=new node(node,null, null)
+    }
+  }
 }
