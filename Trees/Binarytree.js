@@ -13,12 +13,20 @@ class BinaryTree{
     this.height=null
   }
 
-  insertLeft(node){
-    let left= this.root.left
-    if(left==null){
-        this.root.left=new node(node,null, null)
+  insert(node){
+    let current= this.root
+    while(true){
+    if(current==null){
+        current=new node(node,null, null)
+        break
     }else{
-         this.root.right=new node(node,null, null)
-    }
+       if(current.left==null){
+        current.left=new node(node,null, null)
+        break
+       }else if(){
+        
+       }
+       
+    }}
   }
 }
