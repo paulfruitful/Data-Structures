@@ -9,7 +9,8 @@ class node{
 
 class BinaryTree{
   constructor(root){
-    this.root=root
+    this.root=new node(root,null,null)
+    this.height=null
   }
 
 }
