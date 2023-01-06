@@ -16,18 +16,20 @@ class BinaryTree{
   insert(node){
     let current= this.root
     while(true){
-    if(current==null){
+       if(current.left==null){
+        current=current.left
         current=new node(node,null, null)
         break
-    }else{
-       if(current.left==null){
-        current.left=new node(node,null, null)
-        break
        }else if(current.right==null){
+        current=current.right
         current.right=new node(node,null, null)
         break   
     }
        
     }}
   }
-}
+
+
+let test= new BinaryTree(8)
+test.insert(7)
+console.log(test)
