@@ -23,9 +23,10 @@ class BinaryTree{
        if(current.left==null){
         current.left=new node(node,null, null)
         break
-       }else if(){
-        
-       }
+       }else if(current.right==null){
+        current.right=new node(node,null, null)
+        break   
+    }
        
     }}
   }
