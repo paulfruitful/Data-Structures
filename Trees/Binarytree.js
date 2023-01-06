@@ -12,8 +12,8 @@ class BinaryTree{
     this.root=new node(root,null,null)
     this.height=null
   }
- 
-  insertNode(node){
+
+  insertLeft(node){
     let left= this.root.left
     if(left==null){
         this.root.left=new node(node,null, null)
