@@ -19,7 +19,7 @@ class BinaryTree{
 insert(data)
 {
     
-    var newNode = new Node(data);
+    let newNode = new Node(data);
 
     if(this.root === null)
         this.root = newNode;
