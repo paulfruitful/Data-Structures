@@ -1,8 +1,10 @@
-class Node{
-    constructor(root,left,right){
-        this.root=root
-        this.left=left
-        this.right=right
+class Node
+{
+    constructor(data)
+    {
+        this.data = data;
+        this.left = null;
+        this.right = null;
     }
 }
 
@@ -10,22 +12,21 @@ class Node{
 class BinaryTree{
   constructor(root){
     this.root=null
-    this.height=null
+ 
   }
 
-  
+
 insert(data)
 {
-    // 
-    var newNode = new Node(data,null,null);
     
+    var newNode = new Node(data);
+
     if(this.root === null)
         this.root = newNode;
     else
  
         this.insertNode(this.root, newNode);
 }
-
 insertNode(node, newNode)
 {
     if(newNode.data < node.data)
@@ -51,7 +52,8 @@ insertNode(node, newNode)
   }
 
 
-let test= new BinaryTree(8)
+let test= new BinaryTree()
 test.insert(7)
+test.insert(4)
 test.insert(9)
 console.log(test)
