@@ -5,6 +5,9 @@ class MaxHeap{
     isRoot(index){
         return index==1
     }
+    level(index){
+        return index/2 
+    }
     parent(data){
         
      
