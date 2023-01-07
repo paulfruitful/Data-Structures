@@ -3,6 +3,7 @@ class Node{
         this.data=data
         this.left=null
         this.right=null
+        this.index=null
     }
     delete(){
         this.data=this.left
@@ -17,6 +18,7 @@ class MaxHeap{
         let node= new Node(data)
         if(this.root==null){
         this.root=node
+        this.root.index=1
         }else{
             return "There's an existing root"
         }
