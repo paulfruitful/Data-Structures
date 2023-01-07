@@ -16,7 +16,10 @@ class MaxHeap{
     insert(data){
         let node= new Node(data)
         if(this.root==null){
-
+        this.root=node
+        }else{
+            insertNode(root,node)
         }
+        
     }
 }
