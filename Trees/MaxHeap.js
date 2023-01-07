@@ -8,3 +8,9 @@ class Node{
         this.data=this.left
     }
 }
+
+class MaxHeap{
+    constructor(){
+        this.root=null
+    }
+}
