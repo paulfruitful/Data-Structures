@@ -4,4 +4,7 @@ class Node{
         this.left=null
         this.right=null
     }
+    delete(){
+        this.data=this.left
+    }
 }
