@@ -28,6 +28,8 @@ class MaxHeap{
        }else{
           if(root.left==null){
             root.left=Newnode
+          }else if(root.right==null){
+            root.right=Newnode
           }
        }
      }  
