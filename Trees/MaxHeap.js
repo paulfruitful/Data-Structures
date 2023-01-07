@@ -33,10 +33,8 @@ add(node) {
 Up(index){
     let nowIndex=index
     let parentIndex=this.parent(nowIndex)
-    
+
 }
   }
   
 
-
-let test=new MaxHeap
