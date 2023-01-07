@@ -23,6 +23,10 @@ class MaxHeap{
      
     }
     insertNode(root,Newnode){
-
+       if(root.data<Newnode.data){
+           return TypeError('The Node to be inserted is greater than root node')
+       }else{
+        
+       }
      }  
 }
