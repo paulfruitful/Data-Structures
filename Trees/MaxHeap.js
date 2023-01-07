@@ -33,7 +33,9 @@ add(node) {
 Up(index){
     let nowIndex=index
     let parentIndex=this.parent(nowIndex)
+   while(nowIndex>0 && this.values[nowIndex]>this.values[parentIndex]){
 
+   }
 }
   }
   
