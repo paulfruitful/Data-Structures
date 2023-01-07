@@ -18,7 +18,7 @@ class MaxHeap{
         if(this.root==null){
         this.root=node
         }else{
-            insertNode(root,node)
+            this.insertNode(root,node)
         }
      
     }
@@ -33,8 +33,13 @@ class MaxHeap{
           }else if(root.left.data<Newnode){
             return TypeError('The Node to be inserted is greater than root node')
           }else if(root.left.data>Newnode){
-            insertNode(root.left,Newnode)
+            this.insertNode(root.left,Newnode)
           }
        }
      }  
 }
+
+let test=new MaxHeap
+test.insert(20)
+test.insert(40)
+console.log(test)
