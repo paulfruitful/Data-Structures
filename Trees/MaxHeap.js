@@ -13,33 +13,59 @@ class MaxHeap{
     constructor(){
         this.root=null
     }
-    insert(data){
+    insertroot(data){
         let node= new Node(data)
         if(this.root==null){
         this.root=node
         }else{
-            this.insertNode(root,node)
+            return "There's an existing root"
         }
      
     }
-    insertNode(root,Newnode){
-       if(root.data<Newnode.data){
-           return TypeError('The Node to be inserted is greater than root node')
+    insertLeft(Newnode){
+        let newnode=new Node(Newnode)
+       if(this.root<newnode.data){
+           return console.log('The Node to be inserted is greater than root node')
        }else{
-          if(root.left==null){
-            root.left=Newnode
-          }else if(root.right==null){
-            root.right=Newnode
-          }else if(root.left.data<Newnode){
-            return TypeError('The Node to be inserted is greater than root node')
-          }else if(root.left.data>Newnode){
-            this.insertNode(root.left,Newnode)
+          if(this.root.left==null){
+            this.root.left=newnode
+          }else if(this.root.left.data<newnode){
+            return console.log('The Node to be inserted is greater than root node')
+          }else{
+            this.insertNode(this.root.left,newnode)
           }
        }
-     }  
+     }
+     
+insertNode(node, newNode)
+{
+    if(newNode.data > node.right)
+    {
+        if(node.left === null)
+            node.left = newNode;
+        else
+ 
+         
+            this.insertNode(node.left, newNode);
+    }
+ 
+    else
+    {
+        if(node.right === null)
+            node.right = newNode;
+        else
+ 
+            
+            this.insertNode(node.right,newNode);
+    }
 }
+  }
+  
+
 
 let test=new MaxHeap
-test.insert(20)
-test.insert(40)
+test.insertroot(20)
+test.insertLeft(5)
+test.insertLeft(4)
+test.insertLeft(3)
 console.log(test)
