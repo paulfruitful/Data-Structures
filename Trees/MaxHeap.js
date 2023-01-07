@@ -2,6 +2,9 @@ class MaxHeap{
     constructor(){
         this.heap=[]
     }
+    isRoot(index){
+        return index==1
+    }
     parent(data){
         
      
