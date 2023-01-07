@@ -3,7 +3,6 @@ class Node{
         this.data=data
         this.left=null
         this.right=null
-        this.index=null
     }
     delete(){
         this.data=this.left
@@ -18,7 +17,6 @@ class MaxHeap{
         let node= new Node(data)
         if(this.root==null){
         this.root=node
-        this.root.index=1
         }else{
             return "There's an existing root"
         }
@@ -31,7 +29,6 @@ class MaxHeap{
        }else{
           if(this.root.left==null){
             this.root.left=newnode
-            this.root.left=2
           }else if(this.root.left.data<newnode){
             return console.log('The Node to be inserted is greater than root node')
           }else{
@@ -44,12 +41,8 @@ insertNode(node, newNode)
 {
     if(newNode.data > node.right)
     {
-        if(node.left === null){          
-              let prev=node;
+        if(node.left === null)
             node.left = newNode;
-            node.left.index=prev.index+1
-        }
-
         else
  
          
