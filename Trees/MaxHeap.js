@@ -20,6 +20,8 @@ class MaxHeap{
         }else{
             insertNode(root,node)
         }
-        
+    insertNode(root,Newnode){
+
+     }   
     }
 }
