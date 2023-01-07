@@ -13,12 +13,12 @@ class MaxHeap{
      
     }
     leftchild(index){
-
+        return (2*index)+1
      }
      
 rightchild(index)
 {
-
+    (2*index)+2
 }
   }
   
