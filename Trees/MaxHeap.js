@@ -12,6 +12,11 @@ class MaxHeap{
         
      
     }
+    isLeaf(index) {
+        return (
+            index >= Math.floor(this.values.length / 2) && index <= this.values.length - 1
+        )
+    }
     leftchild(index){
         return (2*index)+1
      }
@@ -48,7 +53,9 @@ getMax(){
  return max
 }
 goDown(index){
+if(!this.isLeaf()){
 
+}
 }
 
   }
