@@ -54,7 +54,12 @@ getMax(){
 }
 goDown(index){
 if(!this.isLeaf()){
-
+  let leftchild=this.leftchild(index)
+  let rightchild=this.rightchild(index)
+  let maximum= index
+  if(this.heap[leftchild]>this.heap[maximum]){
+     maximum=leftchild
+  }
 }
 }
 
