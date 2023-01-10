@@ -39,6 +39,13 @@ goUp(index){
         parentIndex=this.parent(nowIndex)
    }
 }
+getMax(){
+  if(this.heap.length<1) return "Empty Heap";
+  
+
+
+}
+
   }
   
 
