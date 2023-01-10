@@ -28,13 +28,15 @@ add(node) {
     // add element to the end of the heap
     this.values.push(element);
     // move element up until it's in the correct position
-    this.Up(this.values.length - 1);
+    this.goUp(this.values.length - 1);
 }
-Up(index){
+goUp(index){
     let nowIndex=index
     let parentIndex=this.parent(nowIndex)
    while(nowIndex>0 && this.values[nowIndex]>this.values[parentIndex]){
-
+        this.exchange(this.heap[nowIndex],this.heap[parentIndex])
+        nowIndex=parentIndex
+        parentIndex=this.parent(nowIndex)
    }
 }
   }
