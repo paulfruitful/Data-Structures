@@ -63,6 +63,10 @@ if(!this.isLeaf()){
   if(this.heap[rightchild]>this.heap[maximum]){
     maximum=rightchild
  }
+ if(maximum!==index){
+    this.swap(maximum,index)
+    this.goDown(maximum)
+ }
 }
 }
 
