@@ -41,8 +41,10 @@ goUp(index){
 }
 getMax(){
   if(this.heap.length<1) return "Empty Heap";
-  
-
+  let max=this.heap[0]
+  let least = this.heap.pop()
+  this.heap[0]=least
+ this.goDown(0)
 
 }
 
