@@ -45,6 +45,9 @@ getMax(){
   let least = this.heap.pop()
   this.heap[0]=least
  this.goDown(0)
+ return max
+}
+goDown(index){
 
 }
 
