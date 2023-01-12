@@ -18,5 +18,8 @@ class Graph{
 let test= new Graph()
 test.addNode("FirstNode")
 test.addNode("SecondNode")
-console.log(test.addEdge("SecondNode","FirstNode"))
+test.addEdge("SecondNode","FirstNode")
 console.log(test)
+/*Graph {
+    nodes: { FirstNode: [ 'SecondNode' ], SecondNode: [ 'FirstNode' ] }
+  }*/
