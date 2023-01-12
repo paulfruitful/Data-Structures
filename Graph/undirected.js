@@ -2,7 +2,7 @@ class Graph{
     constructor(){
         this.nodes={}
     }
-    addNode(){
-        
+    addNode(Newnode){
+            this.node[Newnode]=[]    
     }
 }
