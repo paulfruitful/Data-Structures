@@ -6,7 +6,10 @@ class Graph{
             this.nodes[Newnode]=[]    
     }
     addEdge(node1,node2){
-        if(!node1 || !node2) return "nodes don't exist";
+        if(!this.nodes[node1] || !this.nodes[node2]) return "nodes don't exist";
+        this.nodes[node1].push(node2)
+        this.nodes[node2].push(node1)
+        return "Edge between nodes have been connected";
     }
 }
   
@@ -14,4 +17,6 @@ class Graph{
 
 let test= new Graph()
 test.addNode("FirstNode")
+test.addNode("SecondNode")
+console.log(test.addEdge("SecondNode","FirstNode"))
 console.log(test)
