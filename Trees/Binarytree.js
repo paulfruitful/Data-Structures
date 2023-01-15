@@ -120,9 +120,10 @@ let test= new BinaryTree()
 test.insert(7)
 test.insert(4)
 test.insert(9)
-console.log(test)/*  root: Node {
-    data: 7,
-    left: Node { data: 4, left: null, right: null },
-    right: Node { data: 9, left: null, right: null }
-  }
-}*/
+test.delete(4)
+console.log(test)/*BinaryTree {
+    root: Node {
+      data: 7,
+      left: null,
+      right: Node { data: 9, left: null, right: null }
+    }*/
