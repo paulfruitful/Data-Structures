@@ -49,9 +49,17 @@ insertNode(node, newNode)
             this.insertNode(node.right,newNode);
     }
 }
-  }
 
+MinNode(node)
+{
+   
+    if(node.left === null)
+        return node;
+    else
+        return this.MinNode(node.left);
+}
 
+}
 let test= new BinaryTree()
 test.insert(7)
 test.insert(4)
