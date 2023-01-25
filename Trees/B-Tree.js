@@ -7,6 +7,8 @@ class Btree{
         this.root[node]={}
     }else if(this.root.length<3){
         this.root[node]={}
+    }else{
+        
     }
  }
 }
