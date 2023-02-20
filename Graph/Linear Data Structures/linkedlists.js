@@ -1,6 +1,8 @@
-function node(head,next){
+class  node{
+    constructor(head,next){ 
   this.head=head
   this.next=next
+}
 }
 
 class linkedList{
@@ -10,7 +12,8 @@ class linkedList{
     }
 
     insert(element){
-    let newNode=node(element,this.head)
+    let newNode=new node(element,this.head)
+    this.head=newNode
     this.length++
     }
 }
