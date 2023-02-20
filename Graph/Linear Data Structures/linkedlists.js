@@ -8,18 +8,19 @@ class  node{
 class linkedList{
     construct(){
        this.head=null
-       this.size=0
+       this.size=null
     }
 
     insert(element){
-    let newNode=new node(element,this.head)
+    let newNode=new node(element,this.head) 
     this.head=newNode
-    this.size=+1
+    this.size++
     }
 }
 
 
 const test= new linkedList()
 test.insert(5)
+test.insert(6)
 test.insert(3)
 console.log(test)
