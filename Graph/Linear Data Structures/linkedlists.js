@@ -8,13 +8,13 @@ class  node{
 class linkedList{
     construct(){
        this.head=null
-       this.length=0
+       this.size=0
     }
 
     insert(element){
     let newNode=new node(element,this.head)
     this.head=newNode
-    this.length++
+    this.size=+1
     }
 }
 
