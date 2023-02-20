@@ -14,3 +14,9 @@ class linkedList{
     this.length++
     }
 }
+
+
+const test= new linkedList()
+test.insert(5)
+test.insert(3)
+console.log(test)
