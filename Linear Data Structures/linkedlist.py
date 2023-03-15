@@ -1,43 +1,50 @@
 class Node:
-  def __init__(self, value,next,index):
-    self.value=value
-    self.next=next
-    self.index=index
+    def __init__(self,value,next,index):
+      self.value=value
+      self.next=next
+      self.index=index
 
 class SinglyLinked:
-  def __init__(self):
-    self.list=None
-    self.length=0
-  def insert(self,value):
-    node=Node(value,self.list,self.length)
-    self.list=node
-    self.length+=1
-  def find(self,value):
-    data=self.list
-    ans=f'{value} Not Present'
-    while data:
-      if data.value==value:
-         ans=f'{value} Present'
-         break  
-      else:
-        data=data.next
-    return print(ans)
-  
-  def getIndex(self,index):
+   def __init__(self):
+      self.list=None
+      self.length=0
+   def insert(self,value):
+      node=Node(value,self.list,self.length)
+      self.list=node
+      self.length+=1
+   def find(self,val):
       data=self.list
-      ans='That Index Is Not Available'
+      ans='Not Found'   
       while data:
-        if data.index==index:
-           ans=data
-           break
-        else:
-          data=data.next 
-      return ans  
-  
+         if data.value==val:
+            ans='Found'
+            break
+         else:
+            data=data.next
+      return ans
+   def getIndex(self,index):
+      data=self.list
+      ans='Index Not Found'
+      while data:
+         if data.index==index:
+            ans=data
+            break
+         else:
+            data=data.next
+      return ans
+   
+   def print(self):
+      data=self.list
+      while data:
+         print(f'{data.index}->{data.value },')
+         data=data.next
+   
 
 test=SinglyLinked()
+test.insert(3)
+test.insert(13)
 test.insert(23)
-test.insert(20)
-indexed=test.getIndex(4)
-print(indexed)
+test.insert(33)
+test.insert(43)
 
+print(test.getIndex(3).value)
