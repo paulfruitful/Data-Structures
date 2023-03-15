@@ -1,8 +1,8 @@
 def selectionSort(a):
         for  i in range(0,len(a)):
             k=i
-            for j in range(1,len(a)):
-                  if a[j]>a[k]:
+            for j in range(i+1,len(a)):
+                  if a[j]<a[k]:
                         k=j
                   else:
                         k=k
