@@ -27,7 +27,18 @@ class DoublyLinked:
                 listed+=f'<-{data.val}'
             data=data.next
         return print(listed)
-        
+    def find(self,val):
+      data=self.head
+      ans='Not Found'   
+      while data:
+         if data.val==val:
+            ans='Found'
+            break
+         else:
+            data=data.next
+      return ans
+    def getIndex(self,index):
+       data=self.head
         
 
 
@@ -37,5 +48,5 @@ test.insert(3)
 test.insert(5)
 test.insert(6)
 test.insert(8)
+print(test.find(8))
 
-test.print()
