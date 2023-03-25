@@ -39,11 +39,15 @@ class CircularLinked:
       data=self.list
       string=''
       while data:
-         string+='f{data.val}->{data.next.val}->'
+         string+='f{data.value}->{data.next.value}->'
          data=data.next.next
       return print(string)
    
 
 test=CircularLinked()
 test.insert(3)
+test.insert(13)
+test.insert(23)
+test.insert(33)
+test.insert(43)
 test.print()
