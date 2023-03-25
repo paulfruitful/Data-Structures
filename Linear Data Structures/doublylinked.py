@@ -39,6 +39,16 @@ class DoublyLinked:
       return ans
     def getIndex(self,index):
        data=self.head
+       while data:
+          if data.index==index:
+             break
+          else:
+             data=data.next
+       if data:
+        return data
+       else:
+          return 'Index Not Found'
+       
         
 
 
@@ -48,5 +58,5 @@ test.insert(3)
 test.insert(5)
 test.insert(6)
 test.insert(8)
-print(test.find(8))
+print(test.getIndex(8))
 
