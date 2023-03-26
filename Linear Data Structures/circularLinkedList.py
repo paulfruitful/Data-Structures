@@ -31,16 +31,23 @@ class CircularLinked:
          if data.index==index:
             ans=data
             break
+         if data.index==0:
+            break
          else:
-            data=data.next
+            data=data.next 
       return ans
    
    def print(self):
       data=self.list
       string=''
       while data:
-         string+='f{data.value}->{data.next.value}->'
-         data=data.next.next
+         string+=f'{data.value}->{data.next.value}->'
+        
+         if data.index== (0):
+            string+=f'{data.value}->({data.next.value})'
+            break
+         else:
+             data=data.next.next
       return print(string)
    
 
@@ -51,3 +58,4 @@ test.insert(23)
 test.insert(33)
 test.insert(43)
 test.print()
+print(test.getIndex(300))
