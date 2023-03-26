@@ -8,12 +8,15 @@ class CircularLinked:
    def __init__(self):
       self.list=None
       self.length=0
+   
    def insert(self,value):
       node=Node(value,self.list,self.length)
       self.list=node
       self.length+=1
       first=self.getIndex(0)
       first.next=node
+
+
    def find(self,val):
       data=self.list
       ans='Not Found'   
@@ -24,18 +27,21 @@ class CircularLinked:
          else:
             data=data.next
       return ans
+   
    def getIndex(self,index):
       data=self.list
-      ans='Index Not Found'
+   
       while data:
          if data.index==index:
-            ans=data
             break
          if data.index==0:
             break
          else:
             data=data.next 
-      return ans
+      if data.index==index:
+       return data
+      else:
+         return 'Index Not Found'
    
    def print(self):
       data=self.list
@@ -58,4 +64,4 @@ test.insert(23)
 test.insert(33)
 test.insert(43)
 test.print()
-print(test.getIndex(300))
+print(test.getIndex(100))
