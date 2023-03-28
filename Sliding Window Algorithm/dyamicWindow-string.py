@@ -1,3 +1,7 @@
+'''
+Dynamic Window: Finding the Max Repeating SubString of K length of a String
+'''
+
 def findMaxRepeatSubString(string,k):
     maxString=float('inf')
     add=0
