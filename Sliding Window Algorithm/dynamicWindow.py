@@ -1,3 +1,7 @@
+
+"""Dynamic Slinding WIndow: Finding the minimun subarray with sum of up
+to x or greater than x"""
+
 def findMinSumLength(array,target):
     currentSum=0
     minLength=10000000000000000000000000000000000000000000000000000000000000
