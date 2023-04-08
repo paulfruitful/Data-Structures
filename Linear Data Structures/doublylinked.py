@@ -5,7 +5,7 @@ class Node:
         self.prev=prev
         self.index=index
 
-        
+
 class DoublyLinked:
     def __init__(self):
         self.head=None
@@ -22,11 +22,35 @@ class DoublyLinked:
         while data:
             if data.next:
              if data.prev:
-              listed+=f'<-{data.val}->'
+              listed+=f'''
+                ---------------
+                next: {data.next.val}
+                value:{data.val}
+                prev: {data.prev.val}
+                ------------------
+                    |
+                   \ /
+                '''
              else:
-                listed+=f'{data.val}->'
+                listed+=f'''
+                ---------------
+                next: {data.next.val}
+                value:{data.val}
+                prev: Null
+                ------------------
+                    |
+                   \ /
+                '''
             else:
-                listed+=f'<-{data.val}'
+                listed+=f'''
+                   / \
+                    |
+                ---------------
+                next: Null
+                value:{data.val}
+                prev:{data.prev.val}
+                ------------------
+                '''
             data=data.next
         return print(listed)
     def find(self,val):
@@ -60,5 +84,5 @@ test.insert(3)
 test.insert(5)
 test.insert(6)
 test.insert(8)
-print(test.getIndex(8))
+test.print()
 
