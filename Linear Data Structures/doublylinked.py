@@ -4,6 +4,8 @@ class Node:
         self.next=next
         self.prev=prev
         self.index=index
+
+        
 class DoublyLinked:
     def __init__(self):
         self.head=None
