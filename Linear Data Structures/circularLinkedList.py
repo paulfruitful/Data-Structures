@@ -45,12 +45,24 @@ class CircularLinked:
    
    def print(self):
       data=self.list
-      string=''
+      string='\n Circular Linked List'
       while data:
-         string+=f'{data.value}->{data.next.value}->'
+         string+=f'''
+        ------------------------- 
+        value: {data.value}
+        next:({data.next.value})
+        -------------------------
+         |
+        \ /
+        '''
         
          if data.index== (0):
-            string+=f'{data.value}->({data.next.value})'
+            string+=f'''
+        ------------------------- 
+        value: {data.value}
+        next:({data.next.value})
+        -------------------------
+        '''
             break
          else:
              data=data.next.next

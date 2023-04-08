@@ -53,7 +53,7 @@ class CircularLinked:
         
         string+=f'''
         -------------------------
-        prev: {data.prev.value} 
+        prev: ({data.prev.value})
         value: {data.value}
         current ({data.next.value})
         -------------------------
@@ -63,9 +63,9 @@ class CircularLinked:
         if data.index== (0):
             string+=f'''
         ------------------------
-        prev: {data.prev.value} 
+        prev: ({data.prev.value})
         value: {data.value}
-        current ({data.next.value})
+        next: ({data.next.value})
         ---------------------------
         '''
             break
