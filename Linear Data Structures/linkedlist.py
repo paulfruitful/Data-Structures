@@ -13,7 +13,7 @@ class SinglyLinked:
       self.list=node
       self.length+=1
    def find(self,val):
-      data=self.list
+      data=self.list 
       ans='Not Found'   
       while data:
          if data.value==val:
@@ -32,6 +32,10 @@ class SinglyLinked:
          else:
             data=data.next
       return ans
+   def remove(self,index):
+     data=self.getIndex(index)
+     data=data.index
+     self.list=data
    
    def print(self):
       data=self.list
@@ -47,4 +51,5 @@ test.insert(23)
 test.insert(33)
 test.insert(43)
 
-print(test.getIndex(3).value)
+test.remove(4)
+test.print()
