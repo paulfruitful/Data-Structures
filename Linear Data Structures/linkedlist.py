@@ -32,12 +32,12 @@ class SinglyLinked:
          else:
             data=data.next
       return ans
-   def remove(self,index):
+   ''' def remove(self,index):
      data=self.getIndex(index+1)
      if data != self.length:
       data.next=data.next.next
       self.list=data
-   
+   '''
    def print(self):
       data=self.list
       while data:
