@@ -52,6 +52,5 @@ test.insert(23)
 test.insert(33)
 test.insert(43)
 
-
 test.remove(0)
 test.print()
