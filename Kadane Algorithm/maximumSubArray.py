@@ -6,3 +6,9 @@ def maxSub(arr):
         if current>maxGlobal:
             maxGlobal=current
     return maxGlobal
+
+
+
+
+a=[-1,3,0,7,-14.1,-100,14]
+print(maxSub(a))
