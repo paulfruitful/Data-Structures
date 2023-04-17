@@ -33,9 +33,10 @@ class SinglyLinked:
             data=data.next
       return ans
    def remove(self,index):
-     data=self.getIndex(index)
-     data=data.index
-     self.list=data
+     data=self.getIndex(index+1)
+     if data != self.length:
+      data.next=data.next.next
+      self.list=data
    
    def print(self):
       data=self.list
@@ -51,5 +52,6 @@ test.insert(23)
 test.insert(33)
 test.insert(43)
 
-test.remove(4)
+
+test.remove(0)
 test.print()
