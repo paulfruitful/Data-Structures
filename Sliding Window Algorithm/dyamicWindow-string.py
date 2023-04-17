@@ -3,7 +3,7 @@ Dynamic Window: Finding the Max Repeating SubString of K length of a String
 '''
 
 def findMaxRepeatSubString(string,k):
-    maxString=float('inf')
+    maxString=0
     add=0
     start=0
     subString=set()
@@ -14,6 +14,7 @@ def findMaxRepeatSubString(string,k):
            if currentString in subString:
                subString.pop(currentString)
                maxString=max(maxString,add+1)
+               add+=1
            else:
                subString.add(currentString)
                start+=1
@@ -21,4 +22,4 @@ def findMaxRepeatSubString(string,k):
 
 
 test='AAAAAAAAAAAAAAAAAAABBBCCIMMSMSSIIIIIIIAAAAAAAAAIIDNNDNNAAAAAAAAAAHDDDHJAAAAAAAAAAAA'
-print(findMaxRepeatSubString(test,5))
+print(findMaxRepeatSubString(test,1))
