@@ -38,6 +38,7 @@ class SinglyLinked:
            return
         if ind==list.index:
            list=list.next
+           return None
         rem(list.next,ind)
      rem(self.list,index)
 
@@ -57,5 +58,5 @@ test.insert(23)
 test.insert(33)
 test.insert(43)
 
-test.remove(0)
+test.remove(1)
 test.print()
