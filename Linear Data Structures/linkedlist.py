@@ -32,7 +32,7 @@ class SinglyLinked:
          else:
             data=data.next
       return ans
-   def remove(self,index):
+   ''' def remove(self,index):
      def rem(list,ind):
         if list== None:
            return
@@ -40,7 +40,7 @@ class SinglyLinked:
            list=list.next
            return None
         rem(list.next,ind)
-     rem(self.list,index)
+     rem(self.list,index)'''
 
        
 
