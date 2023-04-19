@@ -32,17 +32,7 @@ class SinglyLinked:
          else:
             data=data.next
       return ans
-   ''' def remove(self,index):
-     def rem(list,ind):
-        if list== None:
-           return
-        if ind==list.index:
-           list=list.next
-           return None
-        rem(list.next,ind)
-     rem(self.list,index)'''
-
-       
+   
 
    def print(self):
       data=self.list
@@ -51,6 +41,12 @@ class SinglyLinked:
          data=data.next
    
 
+def rem(list,index):
+      if index!=list.index:
+         rem(list.next,index)  
+      else:
+         list=list.next
+         return None
 test=SinglyLinked()
 test.insert(3)
 test.insert(13)
@@ -58,5 +54,4 @@ test.insert(23)
 test.insert(33)
 test.insert(43)
 
-test.remove(1)
 test.print()
