@@ -4,7 +4,7 @@ class Node:
       self.next=next
       self.index=index
     def delete(self):
-      self=self.next
+      self.next=self.next.next
 
 class SinglyLinked:
    def __init__(self):
@@ -34,21 +34,29 @@ class SinglyLinked:
          else:
             data=data.next
       return ans
+   def remove(self,index):
+      
+      self.getIndex(index+1).delete()
 
    def print(self):
       data=self.list
+      res=''
       while data:
-         print(f'{data.index}->{data.value },')
+         res+=f'{data.index}->{data.value } \n'
          data=data.next
+      return print(res)
    
 
 
-         return None
 test=SinglyLinked()
 test.insert(3)
 test.insert(13)
 test.insert(23)
 test.insert(33)
 test.insert(43)
+
+
+
+test.remove(0)
 
 test.print()
