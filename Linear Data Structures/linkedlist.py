@@ -3,6 +3,8 @@ class Node:
       self.value=value
       self.next=next
       self.index=index
+    def delete(self):
+      self=self.next
 
 class SinglyLinked:
    def __init__(self):
@@ -32,7 +34,6 @@ class SinglyLinked:
          else:
             data=data.next
       return ans
-   
 
    def print(self):
       data=self.list
@@ -41,11 +42,7 @@ class SinglyLinked:
          data=data.next
    
 
-def rem(list,index):
-      if index!=list.index:
-         rem(list.next,index)  
-      else:
-         list=list.next
+
          return None
 test=SinglyLinked()
 test.insert(3)
