@@ -4,6 +4,9 @@ class Node:
         self.next=next
         self.prev=prev
         self.index=index
+        
+    def delete(self):
+      self.next=self.next.next
 
 
 class DoublyLinked:

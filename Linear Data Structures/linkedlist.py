@@ -3,6 +3,7 @@ class Node:
       self.value=value
       self.next=next
       self.index=index
+      
     def delete(self):
       self.next=self.next.next
 
