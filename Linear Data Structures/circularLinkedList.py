@@ -30,7 +30,9 @@ class CircularLinked:
          else:
             data=data.next
       return ans
-   
+   def remove(self,index):
+      self.getIndex(index+1).delete()
+
    def getIndex(self,index):
       data=self.list
    

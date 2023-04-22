@@ -4,7 +4,7 @@ class Node:
         self.next=next
         self.prev=prev
         self.index=index
-        
+
     def delete(self):
       self.next=self.next.next
 
@@ -77,6 +77,9 @@ class DoublyLinked:
         return data
        else:
           return 'Index Not Found'
+    def remove(self,index):
+      self.getIndex(index+1).delete()
+
        
         
 

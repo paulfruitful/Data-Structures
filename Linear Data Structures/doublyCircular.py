@@ -48,7 +48,9 @@ class CircularLinked:
        return data
       else:
          return 'Index Not Found'
-   
+   def remove(self,index):
+      self.getIndex(index+1).delete()
+
    def print(self):
       data=self.list
       string='\nDOUBLY CIRCULAR LINKED LIST'
