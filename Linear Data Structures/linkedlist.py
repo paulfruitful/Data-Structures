@@ -3,7 +3,7 @@ class Node:
       self.value=value
       self.next=next
       self.index=index
-      
+
     def delete(self):
       self.next=self.next.next
 
@@ -36,7 +36,6 @@ class SinglyLinked:
             data=data.next
       return ans
    def remove(self,index):
-      
       self.getIndex(index+1).delete()
 
    def print(self):
