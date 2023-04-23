@@ -80,7 +80,7 @@ class DoublyLinked:
        
     def remove(self,index):
       self.getIndex(index+1).delete()
-      data=self.list
+      data=self.head
       self.length-=1
       while data:
          if data.index<index:
@@ -99,5 +99,5 @@ test.insert(3)
 test.insert(5)
 test.insert(6)
 test.insert(8)
-test.print()
+test.remove(3)
 
