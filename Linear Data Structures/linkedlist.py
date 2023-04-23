@@ -37,9 +37,12 @@ class SinglyLinked:
       return ans
    def remove(self,index):
       self.getIndex(index+1).delete()
-      data=self.getIndex(self.length-(index+1))
+      data=self.list
       self.length-=1
       while data:
+         if data.index<index:
+            break
+         
          data.index-=1
          data=data.next
 
