@@ -65,7 +65,7 @@ class CircularLinked:
          |
         \ /
         '''
-        if data.index== (0):
+        if data.index==0:
             string+=f'''
         ------------------------
         prev: ({data.prev.value})
@@ -75,9 +75,17 @@ class CircularLinked:
         '''
             break
          
-        else:
-             data=data.next.next
+        data=data.next.next
       return print(string)
+   def remove(self,index):
+      self.getIndex(index+1).delete()
+      data=self.list
+      self.length-=1
+      while data:
+         if data.index<index:
+            break
+         data.index-=1
+         data=data.next
    
 
 test=CircularLinked()
@@ -86,4 +94,5 @@ test.insert(13)
 test.insert(23)
 test.insert(33)
 test.insert(43)
+test.remove(2)
 test.print()
