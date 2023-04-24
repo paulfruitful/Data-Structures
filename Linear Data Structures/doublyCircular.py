@@ -81,14 +81,9 @@ class CircularLinked:
       return print(string)
    def remove(self,index):
       self.getIndex(index+1).delete()
-      data=self.list
+    
       self.length-=1
-      while data:
-         if data.index<index:
-            break
-         else:
-          data.index-=1
-          data=data.next
+   
    
 
 test=CircularLinked()
@@ -98,3 +93,4 @@ test.insert(23)
 test.insert(33)
 test.insert(43)
 test.getIndex(2).delete()
+test.print()
