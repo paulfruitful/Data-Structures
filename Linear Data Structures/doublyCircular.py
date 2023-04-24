@@ -84,8 +84,9 @@ class CircularLinked:
       while data:
          if data.index<index:
             break
-         data.index-=1
-         data=data.next
+         else:
+          data.index-=1
+          data=data.next
    
 
 test=CircularLinked()
@@ -94,5 +95,5 @@ test.insert(13)
 test.insert(23)
 test.insert(33)
 test.insert(43)
-test.remove(2)
+test.remove(1)
 test.print()
