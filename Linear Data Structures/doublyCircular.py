@@ -59,6 +59,7 @@ class CircularLinked:
         string+=f'''
         -------------------------
         prev: ({data.prev.value})
+        index: {data.index}
         value: {data.value}
         current ({data.next.value})
         -------------------------
@@ -69,6 +70,7 @@ class CircularLinked:
             string+=f'''
         ------------------------
         prev: ({data.prev.value})
+        index: {data.index}
         value: {data.value}
         next: ({data.next.value})
         ---------------------------
@@ -95,5 +97,5 @@ test.insert(13)
 test.insert(23)
 test.insert(33)
 test.insert(43)
-test.remove(1)
+test.getIndex(0).delete()
 test.print()
