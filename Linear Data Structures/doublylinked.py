@@ -7,6 +7,7 @@ class Node:
 
     def delete(self):
       self.next=self.next.next
+      self.next.prev=self
 
 
 class DoublyLinked:
@@ -100,4 +101,4 @@ test.insert(5)
 test.insert(6)
 test.insert(8)
 test.remove(3)
-
+test.print()
