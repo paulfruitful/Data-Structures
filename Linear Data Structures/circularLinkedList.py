@@ -54,6 +54,7 @@ class CircularLinked:
       while data:
          string+=f'''
         ------------------------- 
+        index:{data.index}
         value: {data.value}
         next:({data.next.value})
         -------------------------
@@ -64,6 +65,7 @@ class CircularLinked:
          if data.index== (0):
             string+=f'''
         ------------------------- 
+        index:{data.index}
         value: {data.value}
         next:({data.next.value})
         -------------------------
@@ -80,5 +82,6 @@ test.insert(13)
 test.insert(23)
 test.insert(33)
 test.insert(43)
+
+
 test.print()
-print(test.getIndex(100))
