@@ -7,6 +7,7 @@ class Node:
         
      def delete(self):
       self.next=self.next.next
+      self.next.prev=self
       
 
 class CircularLinked:
