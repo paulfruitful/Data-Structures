@@ -57,8 +57,8 @@ class CircularLinked:
       data=self.list
       string='\nDOUBLY CIRCULAR LINKED LIST'
       while data:
-        
-        string+=f'''
+        if data.index!=0:
+         string+=f'''
         -------------------------
         prev: ({data.prev.value})
         index: {data.index}
@@ -79,7 +79,8 @@ class CircularLinked:
         '''
             break
          
-        data=data.next.next
+        
+        data=data.next
       return print(string)
    def remove(self,index):
       self.getIndex(index+1).delete()
