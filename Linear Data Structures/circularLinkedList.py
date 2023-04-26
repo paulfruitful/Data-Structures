@@ -52,16 +52,6 @@ class CircularLinked:
       data=self.list
       string='\n Circular Linked List'
       while data:
-         string+=f'''
-        ------------------------- 
-        index:{data.index}
-        value: {data.value}
-        next:({data.next.value})
-        -------------------------
-         |
-        \ /
-        '''
-        
          if data.index== (0):
             string+=f'''
         ------------------------- 
@@ -71,7 +61,17 @@ class CircularLinked:
         -------------------------
         '''
             break
+       
          else:
+             string+=f'''
+        ------------------------- 
+        index:{data.index}
+        value: {data.value}
+        next:({data.next.value})
+        -------------------------
+         |
+        \ /
+        '''
              data=data.next.next
       return print(string)
    
