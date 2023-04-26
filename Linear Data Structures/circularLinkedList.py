@@ -72,7 +72,7 @@ class CircularLinked:
          |
         \ /
         '''
-             data=data.next.next
+             data=data.next
       return print(string)
    
 
