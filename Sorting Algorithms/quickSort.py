@@ -24,3 +24,7 @@ def quicksort(arr, left,right):
       pivot=partition(arr,left,right)
       quicksort(arr,pivot+1,right)
       quicksort(arr,left,pivot-1)
+
+test=[23,9,122,2,1,-2,90,13,8,34]
+quicksort(arr,0,len(arr)-1)
+print(test)
