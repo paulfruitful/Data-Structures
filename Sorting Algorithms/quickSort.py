@@ -10,7 +10,4 @@ def partition(a, l,r):
 
 def quicksort(arr, left,right):
    while(left<right):
-      pivot=partition(arr,left,right)
-      
-
-
+      pivot=0
