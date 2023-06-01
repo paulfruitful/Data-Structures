@@ -8,9 +8,9 @@ def partition(a, l,r):
    rightmark=r-1
    a[pivotIndex],a[r]=a[r],a[pivotIndex]
    while(leftmark<=rightmark):
-      while(leftmark<=rightmark and leftmark<=pivot):
+      while( leftmark<=pivot):
          leftmark+=1
-      while(leftmark<=rightmark and rightmark>=pivot):
+      while(rightmark>=pivot):
          rightmark-=1
       if (leftmark<rightmark):
          a[rightmark],a[leftmark]=a[leftmark],a[rightmark]
@@ -25,8 +25,7 @@ def quicksort(arr, left,right):
       quicksort(arr,left,pivot-1)
 
       quicksort(arr,pivot+1,right)
-   else:
-      return None
+   
       
 test=[23,9,122,2,1,-2,90,13,8,34]
 quicksort(test,0,len(test)-1)
