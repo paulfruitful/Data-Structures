@@ -1,5 +1,5 @@
 def mergeSort(arr,left, right):
-    while left<right:
+    if left<right:
         mid=(left+right)//2
         
         mergeSort(arr,left,mid)
