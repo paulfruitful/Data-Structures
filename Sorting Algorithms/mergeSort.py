@@ -10,4 +10,16 @@ def mergeSort(arr,left, right):
 def merge(arr,left,right):
      i,j=0,0
      while(i<len(left) and j<len(right)):
-         #fkk
+         if(left[i]<right[j]):
+             arr[i]=left[i]
+             i+=1
+         else:
+             arr[j]=left[j]
+             j+=1
+     while(i<len(left)):
+         arr[i]=left[i]
+         i+=1
+     while(j<len(right)):
+         arr[j]=right[j]
+         j+=1
+    
