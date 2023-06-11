@@ -1,5 +1,7 @@
 def mergeSort(arr,left, right):
-    if left<right:
+    left=0
+    right=len(arr)-1
+    while left<right:
         mid=(left+right)//2
         leftArray=arr[:mid]
         rightArray=arr[mid:len(arr)]
@@ -23,3 +25,6 @@ def merge(arr,left,right):
          arr[j]=right[j]
          j+=1
     
+test=[25,31,4,8,123,10,1,-23,9,100,34]
+mergeSort(test)
+print(test)
