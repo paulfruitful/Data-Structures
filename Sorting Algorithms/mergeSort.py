@@ -1,12 +1,12 @@
-def mergeSort(arr,left, right):
+def mergeSort(arr):
     left=0
     right=len(arr)-1
     while left<right:
         mid=(left+right)//2
         leftArray=arr[:mid]
         rightArray=arr[mid:len(arr)]
-        mergeSort(arr,left,mid)
-        mergeSort(arr,mid+1,right)
+        left+=1
+        right-=1
         merge(arr, leftArray, rightArray)
 
 def merge(arr,left,right):
