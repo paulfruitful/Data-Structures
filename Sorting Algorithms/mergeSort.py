@@ -14,7 +14,7 @@ def merge(arr,left,right):
              arr[i]=left[i]
              i+=1
          else:
-             arr[j]=left[j]
+             arr[j]=right[j]
              j+=1
      while(i<len(left)):
          arr[i]=left[i]
