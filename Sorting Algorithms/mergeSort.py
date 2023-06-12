@@ -1,17 +1,18 @@
-def mergeSort(arr,left, right):
+def mergeSort(arr, left, right):
     if left >= right:
         return
 
-    mid=(left+right)//2
+    mid = (left + right) // 2
   
-    mergeSort(arr,left,mid)
-    mergeSort(arr,mid+1,right) 
-    leftArray=arr[left:mid+1]
-    rightArray=arr[mid+1:right+1]
-    merge(arr, leftArray, rightArray)
+    mergeSort(arr, left, mid)
+    mergeSort(arr, mid + 1, right) 
+    leftArray = arr[left : mid + 1]
+    rightArray = arr[mid + 1 : right + 1]
+    merge(arr, leftArray, rightArray,left)
 
-def merge(arr, left, right):
-    i, j, k = 0, 0, 0
+
+def merge(arr, left, right,l):
+    i, j, k = 0, 0, l
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
             arr[k] = left[i]
