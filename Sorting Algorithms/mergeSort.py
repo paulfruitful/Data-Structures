@@ -1,13 +1,14 @@
 def mergeSort(arr,left, right):
-    if left>=right:
-        return None
-    if left<right:
-        mid=(left+right)//2
-        leftArray=arr[:mid]
-        rightArray=arr[mid:len(arr)]
-        mergeSort(arr,left,mid)
-        mergeSort(arr,mid+1,right)
-        merge(arr, leftArray, rightArray)
+    if left >= right:
+        return
+
+    mid=(left+right)//2
+  
+    mergeSort(arr,left,mid)
+    mergeSort(arr,mid+1,right) 
+    leftArray=arr[left:mid+1]
+    rightArray=arr[mid+1:right+1]
+    merge(arr, leftArray, rightArray)
 
 def merge(arr, left, right):
     i, j, k = 0, 0, 0
@@ -31,6 +32,6 @@ def merge(arr, left, right):
         k += 1
 
     
-test=[25,31,4,8,123,10,1,-23,9,100,34]
+test=[25,31,4,8,123,10,1,0,9,100,34]
 mergeSort(test,0,len(test)-1)
 print(test)
