@@ -52,7 +52,7 @@ class SinglyLinked:
       res=''
       while data:
          if data.next != None:
-          res+=f''' {'{'}\nIndex:{data.index},\nValue:{data.value },\nNext: Null\n{'}'}\n \n'''
+          res+=f''' {'{'}\nIndex:{data.index},\nValue:{data.value },\nNext:{data.next.value}\n{'}'}\n \n'''
          else:
             
           res+=f''' {'{'}\nIndex:{data.index},\nValue:{data.value },\nNext: Null\n{'}'}'''
