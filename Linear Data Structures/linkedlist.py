@@ -51,9 +51,13 @@ class SinglyLinked:
       data=self.list
       res=''
       while data:
-         res+=f'''Index:{data.index}
+         if data.next != None:
+          res+=f'''Index:{data.index}
                   Value:{data.value } 
                   Next:{data.next.value}\n'''
+         else:
+            
+          res+=f''' {'{'}\nIndex:{data.index},\nValue:{data.value },\nNext: Null\n{'}'}'''
          data=data.next
       return print(res)
    
