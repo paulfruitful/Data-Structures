@@ -36,7 +36,7 @@ class SinglyLinked:
             data=data.next
       return ans
    def remove(self,index):
-      self.getIndex(index+1).delete()
+      self.getNode(index+1).delete()
       data=self.list
       self.length-=1
       while data:
@@ -73,4 +73,5 @@ test.insert(38)
 test.insert(37)
 test.insert(12)
 
-test.print()
+test.remove(3)
+print(test.checkIfExists(33))
