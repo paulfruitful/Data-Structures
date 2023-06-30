@@ -53,7 +53,7 @@ class SinglyLinked:
       while data:
          res+=f'''Index:{data.index}
                   Value:{data.value } 
-                  Next:{data.next}\n'''
+                  Next:{data.next.value}\n'''
          data=data.next
       return print(res)
    
