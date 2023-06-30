@@ -15,7 +15,7 @@ class SinglyLinked:
       node=Node(value,self.list,self.length)
       self.list=node
       self.length+=1
-   def find(self,val):
+   def checkIfExists(self,val):
       data=self.list 
       ans='Not Found'   
       while data:
@@ -25,7 +25,7 @@ class SinglyLinked:
          else:
             data=data.next
       return ans
-   def getIndex(self,index):
+   def getNode(self,index):
       data=self.list
       ans='Index Not Found'
       while data:
