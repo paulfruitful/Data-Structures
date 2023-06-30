@@ -73,5 +73,4 @@ test.insert(38)
 test.insert(37)
 test.insert(12)
 
-test.remove(3)
 test.print()
