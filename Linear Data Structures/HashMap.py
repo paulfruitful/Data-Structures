@@ -5,7 +5,7 @@ class HashMap:
         self.size=[0] * size
     
     def hasher(self,arg):
-        return arg % 2
+        return arg % 345
     
         
 
@@ -13,4 +13,4 @@ class HashMap:
 test=HashMap(10)
 
 
-print(test.hasher(10))
+print(test.hasher(1000))
