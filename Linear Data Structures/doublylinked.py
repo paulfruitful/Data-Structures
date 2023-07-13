@@ -27,9 +27,12 @@ class DoublyLinked:
             if data.next:
              if data.prev:
               listed+=f'''
+                      / /
+                       |
                 ---------------
                 next: {data.next.val}
                 value:{data.val}
+                index:{data.index}
                 prev: {data.prev.val}
                 ------------------
                     |
@@ -40,6 +43,7 @@ class DoublyLinked:
                 ---------------
                 next: {data.next.val}
                 value:{data.val}
+                index:{data.index}
                 prev: Null
                 ------------------
                     |
@@ -47,11 +51,12 @@ class DoublyLinked:
                 '''
             else:
                 listed+=f'''
-                   / \
-                    |
+                       / /
+                        |
                 ---------------
                 next: Null
                 value:{data.val}
+                index:{data.index}
                 prev:{data.prev.val}
                 ------------------
                 '''
@@ -80,7 +85,7 @@ class DoublyLinked:
           return 'Index Not Found'
        
     def remove(self,index):
-      self.getIndex(index+1).delete()
+      self.getIndex(index).prev.delete()
       data=self.head
       self.length-=1
       while data:
@@ -101,4 +106,5 @@ test.insert(5)
 test.insert(6)
 test.insert(8)
 test.remove(3)
-test.print()
+print(test.find(6))
+

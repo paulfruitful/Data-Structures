@@ -16,14 +16,14 @@ class CircularLinked:
       node=Node(value,self.list,self.length)
       self.list=node
       self.length+=1
-      first=self.getIndex(0)
+      first=self.getNode(0)
       first.next=node
 
 
-   def find(self,val):
+   def checkIfExists(self,val):
       data=self.list
       ans='Not Found'   
-      while data:
+      while data.index != 0:
          if data.value==val:
             ans='Found'
             break
@@ -31,15 +31,13 @@ class CircularLinked:
             data=data.next
       return ans
    def remove(self,index):
-      self.getIndex(index+1).delete()
+      self.getNode(index+1).delete()
 
-   def getIndex(self,index):
+   def getNode(self,index):
       data=self.list
    
-      while data:
+      while data.index!=0:
          if data.index==index:
-            break
-         if data.index==0:
             break
          else:
             data=data.next 
@@ -84,4 +82,4 @@ test.insert(33)
 test.insert(43)
 
 
-test.print()
+print(test.checkIfExists(123))
