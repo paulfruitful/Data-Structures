@@ -5,7 +5,7 @@ class HashMap:
         self.size=[0] * size
     
     def hasher(self,arg):
-        return arg % len(self.size)
+        return arg % 2
     
         
 
