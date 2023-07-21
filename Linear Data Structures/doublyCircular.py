@@ -28,7 +28,7 @@ class CircularLinked:
    def checkIfExists(self,val):
       data=self.list
       ans='Not Found'   
-      while data.index!=0:
+      while data:
          if data.value==val:
             ans='Found'
             break
@@ -93,5 +93,3 @@ test=CircularLinked()
 test.insert(1)
 test.insert(2)
 
-test.remove(1)
-test.print()
