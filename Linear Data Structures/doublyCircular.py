@@ -21,7 +21,7 @@ class CircularLinked:
             self.list.prev=node
       self.list=node
       self.length+=1
-      first=self.getIndex(0)
+      first=self.getNode(0)
       first.next=node
       self.list.prev=first
 
@@ -36,7 +36,7 @@ class CircularLinked:
             data=data.next
       return ans
    
-   def getIndex(self,index):
+   def getNode(self,index):
       data=self.list
    
       while data:
@@ -51,7 +51,7 @@ class CircularLinked:
       else:
          return 'Index Not Found'
    def remove(self,index):
-      self.getIndex(index+1).delete()
+      self.getNode(index+1).delete()
 
    def print(self):
       data=self.list
@@ -83,7 +83,7 @@ class CircularLinked:
         data=data.next
       return print(string)
    def remove(self,index):
-      self.getIndex(index+1).delete()
+      self.getNode(index).prev.delete()
     
       self.length-=1
    
