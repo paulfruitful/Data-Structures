@@ -25,7 +25,7 @@ class CircularLinked:
       first.next=node
       self.list.prev=first
 
-   def find(self,val):
+   def checkIfExists(self,val):
       data=self.list
       ans='Not Found'   
       while data:
