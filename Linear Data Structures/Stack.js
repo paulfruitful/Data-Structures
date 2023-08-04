@@ -22,5 +22,5 @@ let Test=new Stack()
 Test.push(34)
 Test.push(45)
 Test.push(23)
-
+Test.pull()
 console.log(Test.stack)
