@@ -1,7 +1,7 @@
 class Stack{
  constructor(){
-   let stack=[]
-   let length=0
+   this.stack=[]
+   this.length=0
 
  }
  
@@ -23,4 +23,4 @@ Test.push(34)
 Test.push(45)
 Test.push(23)
 
-console.log(Test)
+console.log(Test.stack)
