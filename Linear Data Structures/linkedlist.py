@@ -74,4 +74,7 @@ test.insert(37)
 test.insert(12)
 
 test.remove(3)
-print(test.checkIfExists(33))
+print(test.checkIfExists(33));
+
+
+
