@@ -5,6 +5,10 @@ class Queue:
    def enqueue(self,value):
       self.queue.append(value)
 
+   def dequeue(self):
+      self.queue.pop(0)
+  
+     
 
 
 
