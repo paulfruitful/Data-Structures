@@ -9,7 +9,7 @@ class Node
 }
 
 
-export default class BinaryTree{
+class BinaryTree{
   constructor(root){
     this.root=null
  
@@ -127,3 +127,6 @@ console.log(test)/*BinaryTree {
       left: null,
       right: Node { data: 9, left: null, right: null }
     }*/
+
+
+    module.exports={BinaryTree,Node};
