@@ -10,21 +10,33 @@ class Tree:
         self.size=0
 
     def insert(self,data):
-      self.help_insert(data,self.root)
+      if self.root==None:
+            self.root=Node(data)
+            self.size+=1
+            
+      else:
+       self.help_insert(data,self.root)
 
 
     def help_insert(self,data,root):
-        if not root:
-            root=Node(data)
-            return 
-        elif root.value>data:
-            self.help_insert(data,root.right)
-        elif root.value<data:
-            self.help_insert(data,root.left)
+         if root.value<data:
+            if root.right is None:
+                root.right=Node(data)
+                self.size+=1
+            else:
+             self.help_insert(data,root.right)
+        
+         if root.value>data:
+            if root.left is None:
+                root.left=Node(data)
+                self.size+=1
+            else:
+             self.help_insert(data,root.left)
+        
         
 
 test=Tree()
 test.insert(3)
 
 test.insert(8)
-print(test.root)
+print(test.root.left)
