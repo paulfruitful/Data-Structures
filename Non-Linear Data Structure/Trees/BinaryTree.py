@@ -32,7 +32,11 @@ class Tree:
                 self.size+=1
             else:
              self.help_insert(data,root.left)
-        
+
+
+    def getNode(self):
+        if self.root is None:
+            return
         
 
 test=Tree()
