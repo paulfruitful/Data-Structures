@@ -44,11 +44,48 @@ class Tree:
           return node
        else:
           self.minNode(self,node.left)
-           
+    
+    def delete(self,value):
+       self.root=self.__help_delete(self.root,value)
+
+    def __help_delete(self,root,value):
+       if(root.value==value):
+          if(root.right==None and root.left):
+             root=root.left 
+             return root
+          elif(root.right and root.left==None):
+             root=root.right
+             return root
+          
+        #If both children are not null
+          elif(root.right and root.left):
+             sub=self.minNode(root.right)
+             root.value=sub.value
+             root.right=self.__help_delete(root.right,sub.value)
+             return root
+          
+      #If both children are null
+          elif(not root.right and not root.left):
+             root=None
+             return root
+      
+      #Traverse through the right subtreee
+       elif(root.value< value):
+          root.right=self.__help_delete(root.right,value)
+          return root 
+       
+      #Traverse through the left subtree
+       elif(root.value> value):
+          root.left=self.__help_delete(root.left,value)
+          return root    
+
+    
         
 
 test=Tree()
 test.insert(3)
-
 test.insert(8)
-print(test.root.left)
+test.insert(4)
+
+test.delete(8)
+print(test.root.right.value)

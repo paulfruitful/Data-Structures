@@ -120,6 +120,7 @@ let test= new BinaryTree()
 test.insert(7)
 test.insert(4)
 test.insert(9)
+test.insert(3)
 test.delete(4)
 console.log(test)/*BinaryTree {
     root: Node {
@@ -129,4 +130,4 @@ console.log(test)/*BinaryTree {
     }*/
 
 
-    module.exports={BinaryTree,Node};
+    //module.exports={BinaryTree,Node};
