@@ -37,6 +37,14 @@ class Tree:
     def getNode(self):
         if self.root is None:
             return
+
+    
+    def minNode(self,node):
+       if(not node.left):
+          return node
+       else:
+          self.minNode(self,node.left)
+           
         
 
 test=Tree()
