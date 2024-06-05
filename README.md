@@ -1,7 +1,8 @@
 # Data Structures and Algorithms
 
 Welcome to my Github repository on Data Structures and Algorithms! This repository contains a collection of commonly used data structures and algorithms implemented in Python.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=wbaDZtxSYJf6qOMZ&amp;list=PLRm2b-7tzI8UyIvT-kfS5yUQW_ozV6LnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br> <a href="https://youtube.com/playlist?list=PLRm2b-7tzI8UyIvT-kfS5yUQW_ozV6LnI&si=kf-OjCvPAwHgViSq">Link to tutorial 🚀 </a>
 ## Data Structures
 The following data structures are currently included in this repository:
 - Arrays
